@@ -29,7 +29,7 @@ h2 {
   font-family: "DM Sans", serif;
   font-weight: 500;
   font-size: 23px;
-  padding: 10px 20px;
+  padding: 0 20px;
 }
 
 h3 {
@@ -38,9 +38,17 @@ h3 {
   padding: 10px 20px;
 }
 
-p {
+h4 {
   font-family: "DM Sans", serif;
   font-size: 20px;
+  font-weight: 300;
+  padding: 5px 20px;
+  line-height: 140%;
+}
+
+p {
+  font-family: "DM Sans", serif;
+  font-size: 17px;
   font-weight: 300;
   padding: 5px 20px;
   line-height: 140%;
@@ -79,6 +87,14 @@ a {
   border-top: 2px solid #93b393;
   margin-top: 20px;
   margin-bottom: 30px;
+}
+
+/*** NAV ***/
+
+.mainNav a {
+  color: black;
+  text-decoration-color: black;
+  font-size: 15px;
 }
 
 /*** LOGO ***/
@@ -144,7 +160,7 @@ a {
 
 /*** PRODUCT-LIST ***/
 
-.product_list_container {
+.productContainer {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
@@ -197,11 +213,78 @@ article {
   background-color: white;
 }
 
+/*** DYNAMISKE PRODUCT-DETALJER ***/
+
+/* Detaljeret produktbeskrivelse */
+.productDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.productInfo {
+  margin: 5px 0 10px 0;
+}
+
+.productPrice {
+  color: #597059;
+}
+/* Køb-knap */
+.buyButton {
+  background-color: #93b393;
+  color: white;
+  border: none;
+  padding: 20px 15px;
+  margin-top: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buyButton:hover {
+  background-color: #597059;
+}
+
+label {
+  font-family: "DM Sans", serif;
+  font-weight: 500;
+  font-size: 23px;
+  padding: 10px 20px;
+}
+
+#size {
+  font-family: "DM Sans", serif;
+  font-weight: 500;
+  font-size: 23px;
+  padding: 5px 15px;
+}
+
+/* Udsalgslabel */
+.saleLabel {
+  position: absolute;
+  display: none;
+  top: 15px;
+  left: 15px;
+  background: #ff4d4d;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
 @media (min-width: 700px) {
   body {
     margin: 0;
     padding: 40px 80px;
     height: 100%;
+  }
+
+  .mainNav > a {
+    display: block;
+    text-decoration: none;
+  }
+
+  .mainNav {
+    align-items: center;
+    justify-content: space-between;
   }
 
   .category_list_container {
@@ -222,7 +305,7 @@ article {
     gap: 2px;
   }
 
-  .product_container {
+  .productContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
@@ -261,9 +344,6 @@ article {
   }
 
   .image_container {
-    /* position: relative;
-    display: inline-block; */
-    display: flex;
-    align-items: flex-start;
+    position: relative;
   }
 }
