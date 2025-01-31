@@ -167,6 +167,12 @@ a {
   padding: 10px 15px;
 }
 
+.product_list_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+}
+
 .sold_out {
   opacity: 40%;
 }

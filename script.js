@@ -3,7 +3,6 @@ const productId = 15260;
 
 fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
   .then((response) => response.json())
-
   .then((data) => {
     productContainer.innerHTML = `
       <img
