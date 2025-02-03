@@ -32,13 +32,13 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
         <label for="size">
           Choose a size : 
           <select name="size" id="size">
-            <option value="35">35</option">
-            <option value="36">36</option">
-            <option value="37">37</option">
-            <option value="38">38</option">
-            <option value="39">39</option">
-            <option value="40">40</option">
-            <option value="41">41</option">
+            <option value="35">35</option>
+            <option value="36">36</option>
+            <option value="37">37</option>
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40">40</option>
+            <option value="41">41</option>
           </select>
         </label>
 
@@ -46,8 +46,8 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
 
         <div class="divider"></div>
         <h2>Productinformation :</h2>
-        <p class"productInfo"><strong>Color : </strong>${data.basecolour}</p>
-        <p class"productInfo"><strong>Description : </strong>${data.description}</p>
+        <p class="productInfo"><strong>Color : </strong>${data.basecolour}</p>
+        <p class="productInfo"><strong>Description : </strong>${data.description}</p>
       </section>
     </main>
     `;

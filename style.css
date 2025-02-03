@@ -316,6 +316,12 @@ label {
     gap: 2px;
   }
 
+  .product_list_container section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   .productContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
