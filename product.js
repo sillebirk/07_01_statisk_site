@@ -25,9 +25,10 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
     class="productInfo"> ${data.brandname}
     </h4>
     
-    <h4 
-    class="productPrice"> ${data.price} DKK
-    </h4>
+   <h4 class="produktPrice">
+  <span>Pris:</span> 
+  ${data.discount ? `<span class="dashed">${data.price} DKK</span> <span class="newPrice">${(data.price * (1 - data.discount / 100)).toFixed(2)} DKK</span>` : `<span>${data.price},-</span>`}
+</h4>
     
     <label for="size">
     Choose a size : 

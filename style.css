@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #;
+  --secondary-color: #e74c3c;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -37,8 +42,9 @@ h1 {
 h2 {
   font-family: "DM Sans", serif;
   font-weight: 400;
-
-  font-size: 20px;
+  font-style: oblique;
+  text-transform: uppercase;
+  font-size: 22px;
   padding: 0 20px;
 }
 
@@ -75,11 +81,6 @@ a {
   list-style: none;
   text-decoration-color: white;
   text-underline-offset: 5px;
-}
-
-.new_price {
-  color: red;
-  font-size: medium;
 }
 
 .price {
@@ -152,7 +153,7 @@ a {
   font-size: 30px;
   color: white;
   display: grid;
-  border: 5px solid white;
+  border: 3px solid black;
   text-decoration: none;
   list-style: none;
   text-align: center;
@@ -234,13 +235,18 @@ section {
 }
 
 .buyButton:hover {
-  background-color: #597059;
+  background-color: #7e0000;
+}
+
+.add_to_bag {
+  margin-bottom: 40px;
+  padding: 0 10px;
 }
 
 .add_to_bag p {
+  font-size: 25px;
   color: white;
   background-color: #93b393;
-  gap: 40px;
   padding: 20px 20px;
   margin-top: auto;
   text-align: center;
@@ -250,13 +256,13 @@ section {
 }
 
 .add_to_bag p:hover {
-  background-color: #597059;
+  background-color: #7e0000;
 }
 
 label {
   font-family: "DM Sans", serif;
   font-weight: 500;
-  font-size: 23px;
+  font-size: 18px;
   padding: 10px 20px;
 }
 
@@ -280,6 +286,10 @@ label {
   font-size: 18px;
   font-style: oblique;
   text-transform: uppercase;
+  visibility: hidden;
+}
+
+.all {
   visibility: hidden;
 }
 
@@ -336,6 +346,15 @@ label {
   color: white;
   padding: 10px 15px;
   z-index: 100;
+}
+
+.dashed {
+  text-decoration: line-through;
+}
+
+.newPrice {
+  color: #7e0000;
+  font-weight: 800;
 }
 
 @media (min-width: 700px) {
@@ -398,6 +417,7 @@ label {
   }
 
   .add_to_bag p {
+    font-size: 18px;
     margin-top: auto;
   }
 
@@ -405,6 +425,12 @@ label {
 
   .image_container {
     position: relative;
+    transform: scale(1);
+  }
+
+  .image_container:hover {
+    position: relative;
+    transform: scale(1.1);
   }
 
   .sale {
@@ -446,5 +472,9 @@ label {
     top: 26%;
     left: 38%;
     z-index: 100;
+  }
+
+  .dashed {
+    text-decoration: line-through;
   }
 }
